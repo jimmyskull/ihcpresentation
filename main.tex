@@ -1,0 +1,376 @@
+\documentclass[14pt,beamer]{beamer}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc} % Codificação UTF-8
+\usepackage[T2A,T1]{fontenc} % Pacote de hifenização
+\usepackage{graphicx} % Imagens
+
+\usepackage{listings} % Mostrar códigos com cores
+\usepackage{color}
+\usepackage{textcomp}
+
+\usefonttheme{professionalfonts}
+
+%###############################################
+%         PRECISA TER O RA NOS SLIDES?
+%###############################################
+
+\newcommand\cyrtext[1]{{\fontencoding{T2A}\selectfont #1}}
+
+\usepackage{tabularx,colortbl} % Cores nas tabelas
+
+
+\setbeamertemplate{title page}[default][colsep=-5bp,rounded=true]
+
+\usetheme[height=15pt]{Berkeley}
+\usecolortheme[RGB={26,89,142}]{structure} 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+\defbeamertemplate*{footline}{infolines theme without institution}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{7em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+\title[Doutor Pecúlio]{Doutor Pecúlio - App para compras pelo menor preço}
+
+\author[Carlos, Lucas e Paulo Roberto]{ \normalsize Carlos A. O. de Souza Junior \footnotesize{(570101439)} \\ 
+		\and \normalsize Lucas J. C. Lorenzetti \footnotesize{(000000000)} \\ 
+		\and \normalsize Paulo R. Urio \footnotesize{(570091403)} }
+%\institute[]{
+%  Departamento de Ciência da Computação \\
+%  Universidade Estadual do Centro-Oeste \\
+%  Guarapuava, Brasil
+%}
+\institute[]{
+    \vspace{10px}~ \\
+    \includegraphics[scale=0.2]{imagens/logo} \\
+  {\rmfamily\scshape Universidade Estadual do Centro-Oeste}
+}
+\date{}
+
+     
+
+
+\makeatletter
+\setlength{\beamer@headheight}{1cm}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor~~\beamer@ifempty{\insertshortinstitute}{}{\insertshortinstitute}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{\today}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\makeatother
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+\begin{frame}
+	\frametitle{Conteúdo}
+	\small
+	\tableofcontents[hideallsubsections]
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Introdução}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\small
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{O aplicativo}
+	
+	\vspace{-30px}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\includegraphics[scale=.15]{imagens/docpig}
+			\end{figure}
+		\end{column}%
+		\hfill%
+		\begin{column}{9\textwidth}
+			\large{\textbf{Doutor Pecúlio}}
+		\end{column}%
+	\end{columns}
+	
+	\vspace{10px}
+	\begin{itemize}
+		\item Me chamar de bebê é fácil, quero ver:
+			\begin{itemize}
+				\item colocar o peito pra fora; e
+				\item deixa eu mamar. 	
+			\end{itemize}
+		\item Gata, você gosta de buceta? Não. Então me dá a tua?
+		\item Acha que é bandida, mas nunca roubou um chocolate no mercado.
+	\end{itemize}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Metas}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\footnotesize
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+\subsection{Usabilidade}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Metas de usabilidade}
+
+\begin{itemize}
+	\item Mamãe, mamãe... me leva no circo? 
+		\begin{itemize}
+			\item Não, filho... Se querem te 
+			ver, que venham aqui em casa...
+		\end{itemize}
+	\item O que é preciso para reunir os Beatles? 
+	\begin{itemize}
+		\item Mais duas balas.
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Experiência}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Metas de experiência do usuário}
+
+Qual a diferença entre um estudante português burro e um estudante português inteligente ?
+\begin{description}
+	\item[Português Burro] Copia tudo o que a professora escreve no
+		quadro e quando ela apaga o quadro, ele apaga tudo no caderno.
+	\item[Português Inteligente] Não copia nada porque ele sabe que a
+	professora vai apagar mesmo.
+\end{description}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Cenários}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\footnotesize
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+\subsection{Cenário 1}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Cenário 1}
+
+	O pai  vira-se para o filho mais velho:
+	\begin{itemize}
+		\item[--] Já fez?
+		\item[--] Sim, papai!
+		\item[--] E você, Jacó, já fez?
+		\item[--] Sim, papai!
+		\item[--] Sarah?
+		\item[--] Já fiz, papai!
+		\item[--] Raquel?
+		\item[--] Também já fiz!
+		\item[--] Ok! Então pode dar a descarga!
+	\end{itemize}
+
+\end{frame}
+
+\subsection{Cenário 2}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Cenário 2}
+
+Um cara vai se confessar com um padre e diz:
+	\begin{itemize}
+		\item[--] Padre, fiz amor com uma preta num quarto escuro... É pecado?
+		\item[--]  Não, meu filho. É pontaria!
+	\end{itemize}
+\end{frame}
+
+\subsection{Cenário 3}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Cenário 3}
+O orifício circular corrugado, localizado na parte ínfero-lombar da região glútea de um indivíduo em alto grau etílico, deixa de estar em consonância com os ditames referentes ao direito individual de propriedade.
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Casos de uso}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\footnotesize
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+\subsection{Caso de uso 1}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Caso de uso 1}
+\end{frame}
+
+\subsection{Caso de uso 2}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Caso de uso 2}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Requisitos}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\small
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Requisitos do sistema}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Modelo e Protótipo}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\footnotesize
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Diagrama UML}
+
+\end{frame}
+
+\subsection{Baixo nível}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Protótipo de baixo nível}
+
+\end{frame}
+
+\subsection{Alto nível}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Protótipo de alto nível}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Conclusão}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+	\small
+	\tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Considerações Finais}
+
+	\begin{block}{}
+	Estou cagando e andando.
+	\end{block}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------ slide ----------------------------------
+
+\section*{Referências}
+
+\begin{frame}{Referências}
+
+	\footnotesize{
+	\begin{thebibliography}{99}
+	\beamertemplatebookbibitems
+	\bibitem[Barbosa]{p1} BARBOSA, Simone D. J.; SILVA, Bruno S. (2010)
+	\newblock Interação humano-computador
+	\newblock \emph{Editora Campus-Elsevier}, ISBN 978-85-352-3418-3.
+
+	\bibitem[Rocha]{p1} DA ROCHA, H. V.; BARANAUSKAS, M. C. C. (2010)
+	\newblock Design e avalia{\c{c}}{\~a}o de interfaces humano-computador
+	\newblock \emph{Unicamp}, ISBN 978-85-888-3304-3.
+	
+	\bibitem[Love]{p1} LOVE, Steve (2005)
+	\newblock Understanding mobile human-computer interaction
+	\newblock \emph{Elsevier Science}, ISBN 978-00-804-5580-8.
+	\end{thebibliography}
+	}
+%	\beamertemplatearticlebibitems
+
+\end{frame}
+
+\section*{}
+
+\begin{frame}
+	\vspace{-15px}
+	\begin{center}
+		\Huge{Obrigado!}
+
+		\small
+
+		\cyrtext{Спасибо за внимание!}
+	\end{center}
+
+	\vspace{15px}
+	\small Carlos Alberto Oliveira de Souza Junior \\
+	\footnotesize{  \textsl{carlos\_bertojr@hotmail.com} }
+	
+	\vspace{20px}
+	\small Lucas José Campos Lorenzetti \\
+	\footnotesize{  \textsl{goodlucas@gmail.com} }
+	
+	\vspace{20px}
+	\small Paulo Roberto Urio \\
+	\footnotesize{  \textsl{paulo@bk.ru} }
+\end{frame}
+
+\end{document}
