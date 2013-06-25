@@ -3,11 +3,11 @@
 \usepackage[utf8]{inputenc} % Codificação UTF-8
 \usepackage[T2A,T1]{fontenc} % Pacote de hifenização
 \usepackage{graphicx} % Imagens
-
-\usepackage{listings} % Mostrar códigos com cores
+\usepackage{tabularx}
+\usepackage{booktabs} 
 \usepackage{color}
 \usepackage{textcomp}
-
+\usepackage{multicol}
 \usefonttheme{professionalfonts}
 
 %###############################################
@@ -45,7 +45,7 @@
 \title[Doutor Pecúlio]{Doutor Pecúlio - App para compras pelo menor preço}
 
 \author[Carlos, Lucas e Paulo Roberto]{ \normalsize Carlos A. O. de Souza Junior \footnotesize{(570101439)} \\ 
-		\and \normalsize Lucas J. C. Lorenzetti \footnotesize{(000000000)} \\ 
+		\and \normalsize Lucas J. C. Lorenzetti \footnotesize{(570091430)} \\ 
 		\and \normalsize Paulo R. Urio \footnotesize{(570091403)} }
 %\institute[]{
 %  Departamento de Ciência da Computação \\
@@ -91,25 +91,122 @@
 
 \begin{frame}
 	\frametitle{Conteúdo}
-	\small
-	\tableofcontents[hideallsubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -------------------------------- section ------------------------------------
 \section{Introdução}
 
+
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\small
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Assistente Pessoal Inteligente}
+    \framesubtitle{Definições}
+
+    \begin{block}{\emph{Intelligent Personal Assistant} (IPA)}
+        Agente de \emph{software} que pode realizar tarefas e
+        serviços para um indivíduo de forma personalizada,
+        acessando APIs.
+    \end{block}
+    
+    \begin{block}{\emph{Application Programming Interface} (API)}
+        Integração com interfaces públicas foi popularizada com a proliferação
+        de aplicativos móveis com acesso à \emph{internet}.
+    \end{block}
+    
+    Exemplos de IPAs:
+    \begin{itemize}
+        \item Google Now; e
+        \item Apple Siri.
+    \end{itemize}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Assistente Pessoal Inteligente}
+    \framesubtitle{Exemplo}
+
+    \begin{block}{Google Now}
+        Agrupa personalizadamente os dados em tempo real do:
+        \begin{itemize}
+            \item Clima;
+            \item tráfego;
+            \item notícias;
+            \item ações;
+            \item preços de varejo;
+            \item etc.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Assistente Pessoal Inteligente}
+    \framesubtitle{Exemplo}
+
+    \begin{block}{Apple Siri}
+        \begin{itemize}
+            \item Assistente cognitivo inteligente;
+            \item utiliza linguagem natural;
+            \item redireciona tarefas à outros IPAs; e
+            \item utiliza IA para conversar com o usuário.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Assistente Pessoal Inteligente}
+    \framesubtitle{Objetivo}
+
+    \begin{block}{Objetivo}
+        Nosso trabalho é voltado ao desenvolvimento 
+        \begin{itemize}
+            \item da prévia de um agente inteligente;
+            \item para consultas de preços.
+        \end{itemize}
+        Para o protótipo desenvolvido, foram feitos
+        \begin{itemize}
+            \item Casos de uso;
+            \item Cenários;
+            \item Personas;
+            \item Análise de requisitos; e
+            \item Avaliação da interface do protótipo.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Doutor Pecúlio}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{O aplicativo}
-	
+    
 	\vspace{-30px}
 	\begin{columns}
 		\begin{column}{.3\textwidth}
@@ -125,15 +222,154 @@
 	
 	\vspace{10px}
 	\begin{itemize}
-		\item Me chamar de bebê é fácil, quero ver:
+        \item Assistente inteligente;
+        \item Para Android;
+		\item Consulta preços em catálogos de
 			\begin{itemize}
-				\item colocar o peito pra fora; e
-				\item deixa eu mamar. 	
+				\item lojas próximas; e
+				\item lojas virtuais. 	
 			\end{itemize}
-		\item Gata, você gosta de buceta? Não. Então me dá a tua?
-		\item Acha que é bandida, mas nunca roubou um chocolate no mercado.
+		\item Busca feita através de uma foto
+			\begin{itemize}
+				\item da capa;
+				\item do código de barras; e
+                \item do código QR (\emph{Quick Response})
+			\end{itemize}
 	\end{itemize}
 \end{frame}
+
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{O aplicativo}
+    \framesubtitle{Foco da aplicação}
+	
+	\vspace{-30px}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\includegraphics[scale=.15]{imagens/docpig}
+			\end{figure}
+		\end{column}%
+		\hfill%
+		\begin{column}{9\textwidth}
+			\large{\textbf{Doutor Pecúlio}}
+		\end{column}%
+	\end{columns}
+	
+	\vspace{10px}
+    O aplicativo é voltado para identificar imagens de
+	\begin{itemize}
+        \item Livros;
+        \item CDs, DVDs, Blu-ray;
+        \item mídias para PCs; e
+        \item mídas para consoles de \emph{videogame}.
+	\end{itemize}
+\end{frame}
+
+
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{O aplicativo}
+    \framesubtitle{Motivação}
+	
+	\vspace{-30px}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\includegraphics[scale=.15]{imagens/docpig}
+			\end{figure}
+		\end{column}%
+		\hfill%
+		\begin{column}{9\textwidth}
+			\large{\textbf{Doutor Pecúlio}}
+		\end{column}%
+	\end{columns}
+
+	\vspace{10px}
+    \begin{columns}
+        \begin{column}{.8\textwidth}
+            \begin{itemize}
+                \item Os aplicativos atuais necessitam da entrada manual
+                    \begin{itemize}
+                    \item do identificador ISBN;
+                    \item do nome do autor;
+                    \item do título; ou 
+                    \item de detalhes edição e editora.
+                    \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}{.2\textwidth}
+            \includegraphics[scale=.3]{imagens/LixoSono}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{O aplicativo}
+    \framesubtitle{Motivação}
+	
+	\vspace{-30px}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\includegraphics[scale=.15]{imagens/docpig}
+			\end{figure}
+		\end{column}%
+		\hfill%
+		\begin{column}{9\textwidth}
+			\large{\textbf{Doutor Pecúlio}}
+		\end{column}%
+	\end{columns}
+	
+	\vspace{20px}
+	Através de técnicas visão computacional
+            \begin{itemize}
+            \item \emph{Content-Based Image Retrieval} (CBIR); e
+            \item \emph{Implicit Concept-Based Image Indexing and Retrieval} (ICIIR);
+            \end{itemize}
+    é possível utilizar fotos para realizar buscas.
+\end{frame}
+
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{O aplicativo}
+    \framesubtitle{Público alvo}
+	
+	\vspace{-30px}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\includegraphics[scale=.15]{imagens/docpig}
+			\end{figure}
+		\end{column}%
+		\hfill%
+		\begin{column}{9\textwidth}
+			\large{\textbf{Doutor Pecúlio}}
+		\end{column}%
+	\end{columns}
+	
+    \begin{block}{Público alvo}
+        \begin{itemize}
+            \item Utiliza um \emph{smartphone} moderno;
+            \item com câmera interna; e
+            \item conexão à \emph{internet}.
+        \end{itemize}
+        Imagina-se que o usuário utilizará em situações corriqueiras, 
+        onde o aplicativo
+        \begin{itemize}
+            \item Não precise de atenção exclusiva; e
+            \item Tenha pouco impacto na atividade atual;
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -------------------------------- section ------------------------------------
@@ -142,8 +378,10 @@
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\footnotesize
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 \subsection{Usabilidade}
@@ -151,17 +389,12 @@
 \begin{frame}
 	\frametitle{Metas de usabilidade}
 
-\begin{itemize}
-	\item Mamãe, mamãe... me leva no circo? 
-		\begin{itemize}
-			\item Não, filho... Se querem te 
-			ver, que venham aqui em casa...
-		\end{itemize}
-	\item O que é preciso para reunir os Beatles? 
-	\begin{itemize}
-		\item Mais duas balas.
-	\end{itemize}
-\end{itemize}
+No contexto de desenvolvimento móvel, planejamos manter o foco em
+\begin{description}
+\item[Aprendizado] Curva de aprendizagem tênue;
+\item[Eficiência] Rápido de usar; e
+\item[Ergonomia] Fácil de navegar.
+\end{description}
 
 \end{frame}
 
@@ -170,12 +403,12 @@
 \begin{frame}
 	\frametitle{Metas de experiência do usuário}
 
-Qual a diferença entre um estudante português burro e um estudante português inteligente ?
+Como metas de experiência, desejamos que seja
 \begin{description}
-	\item[Português Burro] Copia tudo o que a professora escreve no
-		quadro e quando ela apaga o quadro, ele apaga tudo no caderno.
-	\item[Português Inteligente] Não copia nada porque ele sabe que a
-	professora vai apagar mesmo.
+\item[Prestativo] Útil ao usuário;
+\item[Motivador] Causar interesse em utilizar;
+\item[Recompensador] Garantir que o usuário volte a interagir novamente; e
+\item[Agradabilidade] Taxa baixa de erros de consulta.
 \end{description}
 
 \end{frame}
@@ -187,48 +420,118 @@ Qual a diferença entre um estudante português burro e um estudante português 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\footnotesize
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 \subsection{Cenário 1}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Cenário 1}
+	\frametitle{Cenários}
+	\framesubtitle{Cenário 1}
 
-	O pai  vira-se para o filho mais velho:
-	\begin{itemize}
-		\item[--] Já fez?
-		\item[--] Sim, papai!
-		\item[--] E você, Jacó, já fez?
-		\item[--] Sim, papai!
-		\item[--] Sarah?
-		\item[--] Já fiz, papai!
-		\item[--] Raquel?
-		\item[--] Também já fiz!
-		\item[--] Ok! Então pode dar a descarga!
-	\end{itemize}
-
+    \begin{block}{Cenário}
+    Uma tentativa bem sucedida de busca de um produto a partir da foto da câmera
+    interna do \emph{smartphone}, a qual é utilizada para tirar uma foto da capa de um livro de
+    interesse do usuário. O dispositivo já está conectado à uma rede WiFi.
+    \end{block}
 \end{frame}
 
 \subsection{Cenário 2}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Cenário 2}
+	\frametitle{Cenários}
+	\framesubtitle{Cenário 2}
 
-Um cara vai se confessar com um padre e diz:
-	\begin{itemize}
-		\item[--] Padre, fiz amor com uma preta num quarto escuro... É pecado?
-		\item[--]  Não, meu filho. É pontaria!
-	\end{itemize}
+    \begin{block}{Cenário}
+    Uma tentativa mal sucedida de busca de um produto a partir da
+    foto da câmera interna do \emph{smartphone}, a qual é utilizada para
+    tirar uma foto do código de barras de um DVD de interesse do usuário.  O dispositivo
+    já está conectado à uma rede WiFi.
+    \end{block}
 \end{frame}
 
 \subsection{Cenário 3}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Cenário 3}
-O orifício circular corrugado, localizado na parte ínfero-lombar da região glútea de um indivíduo em alto grau etílico, deixa de estar em consonância com os ditames referentes ao direito individual de propriedade.
+	\frametitle{Cenários}
+	\framesubtitle{Cenário 3}
 
+    \begin{block}{Cenário}
+    Acesso à uma busca já realizada anteriormente.  O dispositivo
+    não precisa estar conectado à WiFi.
+    \end{block}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Personas}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
+\end{frame}
+\subsection{Persona 1}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Personas}
+    \framesubtitle{Persona 1}
+
+    \textbf{Nome:} Eduardo H. de Mello \\
+    \textbf{Idade:} 24 anos \\
+
+    \begin{itemize}
+        \item Formado em Arquitetura e Urbanismo;
+        \item Mudou para Curitiba -- PR para mestrado;
+        \item Planeja realizar compras na cidade de Curitiba -- PR:
+        \begin{itemize}
+            \item A procura do melhor preço em todas as lojas factíveis
+                é inexequível.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Persona 2}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Personas}
+    \framesubtitle{Persona 2}
+
+    \textbf{Nome:} Clotilde Van Halen \\
+    \textbf{Idade:} 43 anos \\
+
+    \begin{itemize}
+        \item mulher bem sucedida, chefe de família, 
+            presidente do grupo de leitura do bairro e gerente geral de uma 
+            agência bancária;
+        \item Possui conhecimento de operação de sistemas computacionais;
+        \item Formada em Ciências Econômicas;
+        \item Tem interesse em tecnologias recentes.
+    \end{itemize}
+\end{frame}
+\subsection{Persona 3}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Personas}
+    \framesubtitle{Persona 3}
+
+    \textbf{Nome:} Sirlei da Silva \\
+    \textbf{Idade:} 57 anos \\
+
+    \begin{itemize}
+        \item Aposentado;
+        \item Tem hábito de ir à locadora ver as novidades do cinema;
+        \item Mora em uma megalópole;
+        \item Utiliza um GPS para não se perder, porém não o domina.
+    \end{itemize}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,20 +541,20 @@ O orifício circular corrugado, localizado na parte ínfero-lombar da região gl
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\footnotesize
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
-\subsection{Caso de uso 1}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Caso de uso 1}
-\end{frame}
-
-\subsection{Caso de uso 2}
-% --------------------------------- slide -------------------------------------
-\begin{frame}
-	\frametitle{Caso de uso 2}
+	\frametitle{Casos de uso}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[scale=1]{imagens/caso1.pdf}
+    \end{figure}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -261,63 +564,302 @@ O orifício circular corrugado, localizado na parte ínfero-lombar da região gl
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\small
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Requisitos do sistema}
+
+    \begin{block}{Funcionais}
+        \begin{itemize}
+            \item Integração com as câmeras internas do \emph{smartphone};
+            \item integração com as APIs de compartilhamento de multimídia;
+            \item integração com a API GeoIP; e
+            \item integração com os serviços de lojas virtuais (Amazon.com, Livraria
+                Saraiva, Livrarias Curitiba, Livraria Chain, Submarino.com.br).
+        \end{itemize}
+    \end{block}
 \end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Requisitos do sistema}
+
+    \begin{block}{Não funcionais}
+        \begin{itemize}
+            \item Acesso à \emph{internet};
+            \item visualização do histórico de buscas; e
+            \item acesso ao catálogo de lojas próximas, com base nos resultados
+                da API GeoIP.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -------------------------------- section ------------------------------------
-\section{Modelo e Protótipo}
+\section{Protótipo}
 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\footnotesize
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Diagrama UML}
+	\frametitle{Protótipo}
+	\framesubtitle{Tela inicial - histórico de consutas}
 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.71]{tela/TelaHistorico}
+    \end{figure}
 \end{frame}
 
-\subsection{Baixo nível}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Protótipo de baixo nível}
+	\frametitle{Protótipo}
+	\framesubtitle{Tela de consulta em andamento}
 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.71]{tela/TelaBuscando}
+    \end{figure}
 \end{frame}
 
-\subsection{Alto nível}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
-	\frametitle{Protótipo de alto nível}
+	\frametitle{Protótipo}
+	\framesubtitle{Tela de resultados}
 
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.71]{tela/Tela}
+    \end{figure}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Protótipo}
+	\framesubtitle{Tela de erro ao buscar}
+
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.71]{tela/TelaErro}
+    \end{figure}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -------------------------------- section ------------------------------------
-\section{Conclusão}
+\section{Avaliação}
 
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Conteúdo}
-	\small
-	\tableofcontents[currentsection,hideothersubsections]
+    \begin{multicols}{2}
+        \footnotesize
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
 \end{frame}
 
+\subsection{Percurso cognitivo}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Percurso cognitivo}
+
+    \begin{columns}
+        \begin{column}{.6\textwidth}
+            Porção do sistema escolhida: Acessar a lista de consultas realizadas.
+        \end{column}
+        \begin{column}{.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=.5]{tela/TelaHistorico}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Percurso cognitivo}
+
+    \begin{block}{Passo único}
+        Abrir o aplicativo, visualizar a tela inicial.
+    \end{block}
+    \begin{itemize}
+        \item O usuário tentará atingir a meta correta?
+        \item O usuário perceberá que a ação correta está disponível na interface?
+        \item Uma vez encontrado o elemento de interface, o usuário reconhecerá que ele produzirá o 
+efeito desejado?
+        \item Após a ação correta ser executada, o usuário perceberá que progrediu em direção à solução 
+da tarefa?
+    \end{itemize}
+\end{frame}
+
+\subsection{Avaliação heurística}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Avaliação heurística}
+    
+\par \noindent \textbf{Elemento da interface:} Lista de consultas já realizadas.
+\par \noindent \textbf{Localização:} Tela inicial.
+\par \noindent \textbf{Heurística violada:} Falta de contraste entre e fundo e cores.
+\par \noindent \textbf{Gravidade:} 1 -- cosmético.
+\par \noindent \textbf{Recomendação de solução:} Utilizar cores vivas.
+\end{frame}
+
+\subsection{Método de Inspeção Semiótica (MIS)}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Método de Inspeção Semiótica (MIS)}
+
+    \begin{columns}
+        \begin{column}{.6\textwidth}
+            Avaliação como é comunicação na porção aonde aparece a o item 
+            ``Procurando...''.
+        \end{column}
+        \begin{column}{.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=.5]{tela/TelaBuscando}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Método de Avaliação de Comunicabilidade (MAC)}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Método de Avaliação de Comunicabilidade (MAC)}
+
+	\begin{enumerate}
+        \item Preparação;
+            \begin{itemize}
+                \item Definição: visualizar histórico de buscas;
+                \item Participante: Lucas;
+                \item Roteiro: Observar por dificuldades;
+                \item Teste-piloto: 
+            \end{itemize}
+        %~ \item Aplicação;
+        %~ \item Interpretação;
+        %~ \item Consolidação dos resultados;
+        %~ \item Relato dos resultados;
+	\end{enumerate}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.45]{tela/TelaHistorico}
+    \end{figure}
+\end{frame}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Método de Avaliação de Comunicabilidade (MAC)}
+
+	\begin{enumerate} \setcounter{enumi}{2}
+        \item Aplicação;
+            \begin{itemize}
+                \item Cenário: Abrir o aplicativo doutor pecúlio e visualizar suas consultas já
+                        realizadas.
+                \item Entrevista pós-teste: Aparece a etiqueta \textsc{Socorro!} Se o usuário não consegue realizar a
+                        tarefa.
+            \end{itemize}
+        %~ \item Interpretação;
+        %~ \item Consolidação dos resultados;
+        %~ \item Relato dos resultados;
+	\end{enumerate}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.4]{tela/TelaHistorico}
+    \end{figure}
+\end{frame}
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Método de Avaliação de Comunicabilidade (MAC)}
+
+	\begin{enumerate} \setcounter{enumi}{2}
+        \item Interpretação;
+            \begin{itemize}
+                \item Neste ponto podem surgir rupturas de comunicação.
+            \end{itemize}
+        %~ \item Consolidação dos resultados;
+        %~ \item Relato dos resultados;
+	\end{enumerate}
+
+        \begin{columns}
+           \begin{column}{.4\textwidth}
+                \hfill
+                \includegraphics[scale=.3]{imagens/LixoSono}
+                \vfill
+            \end{column} 
+            \begin{column}{.6\textwidth}
+                \includegraphics[scale=.5]{tela/TelaHistorico}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Avaliação}
+	\framesubtitle{Método de Avaliação de Comunicabilidade (MAC)}
+
+	\begin{enumerate} \setcounter{enumi}{2}
+        \item Consolidação dos resultados;
+            \begin{itemize}
+                \item O aplicativo não mostra qual foi a última busca,
+                apenas listas todas as realizadas.
+                \item Todos participantes utilizaram a mesma etiqueta.
+            \end{itemize}
+        \item Relato dos resultados;
+            \begin{itemize}
+                \item O objetivo era ver se o usuário iria conseguir saber que aquela porção era relativa a suas 
+        últimas pesquisas realizadas, e a conclusão preliminar, visualizando o único caminho, após ter 
+        sido aberto o \emph{software}, a etiquetagem resultou em ``socorro'' já que a função não estava 
+        evidente e pode dizer ``desisto'' quando pode acreditar que não existe aquela porção do 
+        sistema, a sugestão de melhoria seria então colocar um texto dizendo ``últimas consultas''
+        antes de aparecerem as últimas consultas do usuário.
+            \end{itemize}
+        \end{enumerate}
+\end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------------------------- section ------------------------------------
+\section{Considerações Finais}
+
+% --------------------------------- slide -------------------------------------
+\begin{frame}
+	\frametitle{Conteúdo}
+    \begin{multicols}{2}
+        \small
+        \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
+\end{frame}
 % --------------------------------- slide -------------------------------------
 \begin{frame}
 	\frametitle{Considerações Finais}
 
-	\begin{block}{}
-	Estou cagando e andando.
+	\begin{block}{Doutor Pecúlio}
+	O aplicativo é viável e com diferencial no mercado.
+	\end{block}
+    
+    \begin{block}{Avaliação}
+	A avaliação revela que podem haver rupturas de comunicação.
 	\end{block}
 \end{frame}
 
